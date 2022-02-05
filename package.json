@@ -1,0 +1,22 @@
+{
+  "name": "angularexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zutzel/AngularExample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zutzel/AngularExample/issues"
+  },
+  "homepage": "https://github.com/zutzel/AngularExample#readme",
+  "dependencies": {
+    "npm": "^8.4.1"
+  }
+}
