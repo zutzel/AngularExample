@@ -1,1 +1,48 @@
 <p>home works!</p>
+<h1>{{mensagem}}</h1>
+
+<button [disabled]="podeClicar" (click)="exibirMensagem()">
+    Dispara mensagem de alerta
+</button>
+<p [id]="sayHelloId" [style.color]="fontColor">
+    Você pode alterar a cor no componente!
+</p>
+<p>A cor é: {{ fontColor }}</p>
+
+<div *ngIf="condition">Conteúdo renderizado se a condição for verdadeira.</div>
+
+<ng-template [ngIf]="condition"><div>Conteúdo renderizado se a condição for verdadeira.</div></ng-template>
+
+<div *ngIf="condition; else elseBlock">Conteúdo renderizado se a condição for verdadeira.</div>
+<ng-template #elseBlock>Conteúdo renderizado se a condição for falsa.</ng-template>
+
+<div *ngIf="condition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Conteúdo renderizado se a condição for verdadeira.</ng-template>
+<ng-template #elseBlock>Conteúdo renderizado se a condição for falsa.</ng-template>
+
+
+<h2>Oi, Mundo: ngIf!</h2>
+
+<button (click)="onEditClick()">Faça o texto editável!</button>
+
+<div *ngIf="canEdit; else noEdit">
+    <p>Você pode editar o parágrafo seguinte.</p>
+</div>
+
+<ng-template #noEdit>
+    <p>O próximo parágrafo é apenas leitura! Tente clicar no botão!</p>
+</ng-template>
+
+<p [contentEditable]="canEdit">{{ message }}</p>
+
+<table>
+    <thead>
+        <th>Nome</th>
+        <th>Id</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas">
+            <td><button (click)="selecionar(pessoa)">{{pessoa.nome}}</button></td>
+        </tr>
+    </tbody>
+</table>
